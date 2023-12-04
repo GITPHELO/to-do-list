@@ -1,7 +1,7 @@
 // user.js
 const Mongoose = require("mongoose")
 const UserSchema = new Mongoose.Schema({
-  username: {
+  email: {
     type: String,
     unique: true,
     required: true,
@@ -11,7 +11,12 @@ const UserSchema = new Mongoose.Schema({
     minlength: 6,
     required: true,
   },
-  role: {
+  firstname: {
+    type: String,
+    default: "Basic",
+    required: true,
+  },
+  lastname: {
     type: String,
     default: "Basic",
     required: true,
