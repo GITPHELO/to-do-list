@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { FormComponent } from './pages/form/form.component';
+
+
 
 @Component({
   selector: 'app-root',
