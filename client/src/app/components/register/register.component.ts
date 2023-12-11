@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
@@ -14,8 +14,12 @@ export class RegisterComponent {
     email: ['',[Validators.required, Validators.email]],
     password: ['',Validators.required],
     confirmPassword: ['',Validators.required]
+    
+  // }, {
+  //   Validators: passwordMatchValidator
   })
   constructor(private fb: FormBuilder){ }
+
 
   get fullname(){
 
@@ -36,6 +40,13 @@ export class RegisterComponent {
 
 
     return this.registerForm.controls['confirmPassword'];
+
+   }
+
+   submitDetails(){
+
+   const postData = { ...this.registerForm.value } ;
+   delete postData.confirmPassword;
 
    }
 }

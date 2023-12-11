@@ -5,7 +5,10 @@ import { HomeComponent } from './components/home/home.component';
 import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes =[
-
+  {
+    path: '',
+    component: LoginComponent
+  },
   {
     path: 'login',
     component: LoginComponent
@@ -17,12 +20,7 @@ const routes: Routes =[
 {
   path: 'home',
   component: HomeComponent
-},
-{
-
-  path: '**', redirectTo: 'home', pathMatch: 'full'
-
-},
+}
 ];
 
 
